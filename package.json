@@ -4,7 +4,9 @@
   "description": "a skeleton for basic react application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build",
+    "build": "webpack -d && webpack-dev-server --content-base ./dist/app --hot --watch --compress",
+    "build:prod": "webpack -p && webpack-dev-server --content-base ./dist/app --hot --watch --compress"
   },
   "keywords": [
     "reactjs"
